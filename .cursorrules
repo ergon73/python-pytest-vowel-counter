@@ -1,0 +1,58 @@
+# Project rules for Cursor
+
+## Scope
+
+This repo is a small Python homework project: implement `count_vowels()` and cover it with pytest tests.
+
+## Hard constraints
+
+- OS: Windows 11.
+
+  - Prefer PowerShell commands (`py -m ...`).
+  - Do not assume bash/zsh utilities are available.
+
+- Networking:
+
+  - Do not start any server.
+  - Never bind to `localhost:8000` (reserved by the user for vLLM).
+
+- MCP usage:
+
+  - Always use the MCP server `context7` when you need:
+    - pytest discovery rules,
+    - `pytest.mark.parametrize` syntax,
+    - any library/API documentation or version-specific behavior.
+
+## Coding rules
+
+- Use pytest (not unittest).
+- Prefer standard library only; external dependency should be pytest.
+- Keep the solution minimal, readable, and deterministic.
+- Add type hints and a short docstring for public functions.
+- Do not introduce unnecessary abstractions or frameworks.
+
+## Test rules
+
+- Tests must be discoverable by pytest:
+
+  - files: `tests/test_*.py`
+  - functions: `test_*`
+
+- Before finishing, run:
+
+  - `py -m pytest -q`
+
+## Markdown rules
+
+If you edit any `.md` file, it must pass markdownlint rules:
+
+- MD009: no trailing spaces.
+- MD022: blank lines around headings.
+- MD029: consistent ordered-list numbering style.
+- MD032: blank lines around lists.
+
+Do not ignore linter errors for these rules.
+
+## Source of truth
+
+- Follow `genai-readme.md` as the primary specification for what to create and how to validate it.
