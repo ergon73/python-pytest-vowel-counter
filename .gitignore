@@ -1,3 +1,8 @@
 __pycache__/
 .venv/
 *.pyc
+
+# Локальные инструкции (не коммитить)
+.cursorrules
+genai-readme.md
+human-readme.md
